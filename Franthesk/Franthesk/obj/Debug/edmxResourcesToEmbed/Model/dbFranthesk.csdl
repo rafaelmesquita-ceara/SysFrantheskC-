@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="frantheskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CAIXA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DT_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VL_ValorDinheiroAdmin" Type="Double" />
+    <Property Name="VL_ValorCartaoAdmin" Type="Double" />
+    <Property Name="VL_ValorDinheiroFunc" Type="Double" />
+    <Property Name="VL_ValorCartaoFunc" Type="Double" />
+    <NavigationProperty Name="MOVIMENTO" Relationship="frantheskModel.FK_MOVIMENTO_CAIXA" FromRole="CAIXA" ToRole="MOVIMENTO" />
+    <Property Name="NM_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VL_ValorInicial" Type="Double" />
+  </EntityType>
+  <EntityType Name="COMISSAO">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DT_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VL_Total" Type="Double" />
+    <Property Name="VL_Comissao" Type="Double" />
+  </EntityType>
+  <EntityType Name="MERCADORIA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CD_Referencia" Type="Int32" />
+    <Property Name="NM_Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TG_Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DT_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VL_ValorCompra" Type="Double" />
+    <Property Name="VL_ValorVenda" Type="Double" />
+    <Property Name="VL_Estoque" Type="Int32" />
+    <NavigationProperty Name="MERCADORIA_VENDA" Relationship="Self.FK_MERCADORIA_MERCADORIA_VENDA1" FromRole="MERCADORIA" ToRole="MERCADORIA_VENDA" />
+  </EntityType>
+  <EntityType Name="MERCADORIA_VENDA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CD_Mercadoria" Type="Int32" />
+    <Property Name="CD_Venda" Type="Int32" />
+    <Property Name="QT_Quantidade" Type="Int32" />
+    <NavigationProperty Name="MERCADORIA" Relationship="Self.FK_MERCADORIA_MERCADORIA_VENDA1" FromRole="MERCADORIA_VENDA" ToRole="MERCADORIA" />
+    <NavigationProperty Name="VENDA" Relationship="Self.FK_VENDA_MERCADORIA_VENDA" FromRole="MERCADORIA_VENDA" ToRole="VENDA" />
+  </EntityType>
+  <EntityType Name="MOVIMENTO">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DT_Hora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VL_Valor" Type="Double" />
+    <Property Name="TX_Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CD_Caixa" Type="Int32" />
+    <NavigationProperty Name="CAIXA" Relationship="frantheskModel.FK_MOVIMENTO_CAIXA" FromRole="MOVIMENTO" ToRole="CAIXA" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NM_Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TG_Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NR_Senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CD_Admin" Type="Int32" />
+    <Property Name="NR_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TX_ENDE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENDA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NM_Vendedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DT_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VL_ValorTotal" Type="Double" />
+    <Property Name="CD_Cartao" Type="Int32" />
+    <NavigationProperty Name="MERCADORIA_VENDA" Relationship="Self.FK_VENDA_MERCADORIA_VENDA" FromRole="VENDA" ToRole="MERCADORIA_VENDA" />
+  </EntityType>
+  <Association Name="FK_MERCADORIA_MERCADORIA_VENDA1">
+    <End Role="MERCADORIA" Type="Self.MERCADORIA" Multiplicity="0..1" />
+    <End Role="MERCADORIA_VENDA" Type="Self.MERCADORIA_VENDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MERCADORIA">
+        <PropertyRef Name="CD_ID" />
+      </Principal>
+      <Dependent Role="MERCADORIA_VENDA">
+        <PropertyRef Name="CD_Mercadoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENDA_MERCADORIA_VENDA">
+    <End Role="VENDA" Type="Self.VENDA" Multiplicity="0..1" />
+    <End Role="MERCADORIA_VENDA" Type="Self.MERCADORIA_VENDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENDA">
+        <PropertyRef Name="CD_ID" />
+      </Principal>
+      <Dependent Role="MERCADORIA_VENDA">
+        <PropertyRef Name="CD_Venda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="frantheskEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CAIXA" EntityType="Self.CAIXA" />
+    <EntitySet Name="COMISSAO" EntityType="Self.COMISSAO" />
+    <EntitySet Name="MERCADORIA" EntityType="Self.MERCADORIA" />
+    <EntitySet Name="MERCADORIA_VENDA" EntityType="Self.MERCADORIA_VENDA" />
+    <EntitySet Name="MOVIMENTO" EntityType="Self.MOVIMENTO" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <EntitySet Name="VENDA" EntityType="Self.VENDA" />
+    <AssociationSet Name="FK_MERCADORIA_MERCADORIA_VENDA1" Association="Self.FK_MERCADORIA_MERCADORIA_VENDA1">
+      <End Role="MERCADORIA" EntitySet="MERCADORIA" />
+      <End Role="MERCADORIA_VENDA" EntitySet="MERCADORIA_VENDA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENDA_MERCADORIA_VENDA" Association="Self.FK_VENDA_MERCADORIA_VENDA">
+      <End Role="VENDA" EntitySet="VENDA" />
+      <End Role="MERCADORIA_VENDA" EntitySet="MERCADORIA_VENDA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVIMENTO_CAIXA" Association="frantheskModel.FK_MOVIMENTO_CAIXA">
+      <End Role="CAIXA" EntitySet="CAIXA" />
+      <End Role="MOVIMENTO" EntitySet="MOVIMENTO" />
+    </AssociationSet>
+    <EntitySet Name="CATEGORIAS" EntityType="frantheskModel.CATEGORIAS" />
+  </EntityContainer>
+  <Association Name="FK_MOVIMENTO_CAIXA">
+    <End Type="frantheskModel.CAIXA" Role="CAIXA" Multiplicity="0..1" />
+    <End Type="frantheskModel.MOVIMENTO" Role="MOVIMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAIXA">
+        <PropertyRef Name="CD_ID" />
+      </Principal>
+      <Dependent Role="MOVIMENTO">
+        <PropertyRef Name="CD_Caixa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CATEGORIAS">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CD_Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

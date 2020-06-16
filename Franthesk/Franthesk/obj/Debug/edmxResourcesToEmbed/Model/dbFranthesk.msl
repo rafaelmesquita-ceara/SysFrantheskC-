@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="frantheskModelStoreContainer" CdmEntityContainer="frantheskEntities">
+    <EntitySetMapping Name="CAIXA">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.CAIXA)">
+        <MappingFragment StoreEntitySet="CAIXA">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="DT_Data" ColumnName="DT_Data" />
+          <ScalarProperty Name="VL_ValorDinheiroAdmin" ColumnName="VL_ValorDinheiroAdmin" />
+          <ScalarProperty Name="VL_ValorCartaoAdmin" ColumnName="VL_ValorCartaoAdmin" />
+          <ScalarProperty Name="VL_ValorDinheiroFunc" ColumnName="VL_ValorDinheiroFunc" />
+          <ScalarProperty Name="VL_ValorCartaoFunc" ColumnName="VL_ValorCartaoFunc" />
+          <ScalarProperty Name="NM_Status" ColumnName="NM_Status" />
+          <ScalarProperty Name="VL_ValorInicial" ColumnName="VL_ValorInicial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMISSAO">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.COMISSAO)">
+        <MappingFragment StoreEntitySet="COMISSAO">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="DT_Data" ColumnName="DT_Data" />
+          <ScalarProperty Name="VL_Total" ColumnName="VL_Total" />
+          <ScalarProperty Name="VL_Comissao" ColumnName="VL_Comissao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MERCADORIA">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.MERCADORIA)">
+        <MappingFragment StoreEntitySet="MERCADORIA">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="CD_Referencia" ColumnName="CD_Referencia" />
+          <ScalarProperty Name="NM_Nome" ColumnName="NM_Nome" />
+          <ScalarProperty Name="TG_Categoria" ColumnName="TG_Categoria" />
+          <ScalarProperty Name="DT_Data" ColumnName="DT_Data" />
+          <ScalarProperty Name="VL_ValorCompra" ColumnName="VL_ValorCompra" />
+          <ScalarProperty Name="VL_ValorVenda" ColumnName="VL_ValorVenda" />
+          <ScalarProperty Name="VL_Estoque" ColumnName="VL_Estoque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MERCADORIA_VENDA">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.MERCADORIA_VENDA)">
+        <MappingFragment StoreEntitySet="MERCADORIA_VENDA">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="CD_Mercadoria" ColumnName="CD_Mercadoria" />
+          <ScalarProperty Name="CD_Venda" ColumnName="CD_Venda" />
+          <ScalarProperty Name="QT_Quantidade" ColumnName="QT_Quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOVIMENTO">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.MOVIMENTO)">
+        <MappingFragment StoreEntitySet="MOVIMENTO">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="DT_Hora" ColumnName="DT_Hora" />
+          <ScalarProperty Name="VL_Valor" ColumnName="VL_Valor" />
+          <ScalarProperty Name="TX_Descricao" ColumnName="TX_Descricao" />
+          <ScalarProperty Name="CD_Caixa" ColumnName="CD_Caixa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.USUARIO)">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="NM_Nome" ColumnName="NM_Nome" />
+          <ScalarProperty Name="TG_Login" ColumnName="TG_Login" />
+          <ScalarProperty Name="NR_Senha" ColumnName="NR_Senha" />
+          <ScalarProperty Name="CD_Admin" ColumnName="CD_Admin" />
+          <ScalarProperty Name="NR_Tel" ColumnName="NR_Tel" />
+          <ScalarProperty Name="TX_ENDE" ColumnName="TX_ENDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDA">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.VENDA)">
+        <MappingFragment StoreEntitySet="VENDA">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="NM_Vendedor" ColumnName="NM_Vendedor" />
+          <ScalarProperty Name="DT_Data" ColumnName="DT_Data" />
+          <ScalarProperty Name="VL_ValorTotal" ColumnName="VL_ValorTotal" />
+          <ScalarProperty Name="CD_Cartao" ColumnName="CD_Cartao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIAS">
+      <EntityTypeMapping TypeName="IsTypeOf(frantheskModel.CATEGORIAS)">
+        <MappingFragment StoreEntitySet="CATEGORIAS">
+          <ScalarProperty Name="CD_ID" ColumnName="CD_ID" />
+          <ScalarProperty Name="CD_Nome" ColumnName="CD_Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

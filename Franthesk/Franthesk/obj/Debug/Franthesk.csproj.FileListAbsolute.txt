@@ -1,0 +1,69 @@
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csprojAssemblyReference.cache
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Login.resources
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Properties.Resources.resources
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.GenerateResource.cache
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.CoreCompileInputs.cache
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.exe.config
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.exe
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.pdb
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.dll
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.xml
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.CopyComplete
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.exe
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.pdb
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Index.resources
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadUsu.resources
+C:\Users\ery_c\OneDrive\Área de Trabalho\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadastroMercadoria.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.exe.config
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.exe
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.pdb
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.dll
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.xml
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csprojAssemblyReference.cache
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadastroMercadoria.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadUsu.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Index.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Login.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Properties.Resources.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.GenerateResource.cache
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.CoreCompileInputs.cache
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.CopyComplete
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.exe
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.pdb
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadCategoria.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadVenda.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadVenda_Mercadoria.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.caixa.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.consVenda.resources
+C:\Users\ery_c\Desktop\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.consMercadoriaVenda.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.exe.config
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.exe
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\Franthesk.pdb
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.dll
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.xml
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csprojAssemblyReference.cache
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadastroMercadoria.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadCategoria.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadUsu.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadVenda.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.cadVenda_Mercadoria.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.caixa.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.consMercadoriaVenda.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.View.consVenda.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Index.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Login.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.Properties.Resources.resources
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.GenerateResource.cache
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.CoreCompileInputs.cache
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.csproj.CopyComplete
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.exe
+C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\obj\Debug\Franthesk.pdb

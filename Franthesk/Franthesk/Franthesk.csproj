@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDBABDAB-E4D8-4D9F-99B3-303BACADFC1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Franthesk</RootNamespace>
+    <AssemblyName>Franthesk</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\bunifu\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Caixa.cs" />
+    <Compile Include="Controller\Mercadoria.cs" />
+    <Compile Include="Controller\Usuario.cs" />
+    <Compile Include="Controller\Venda.cs" />
+    <Compile Include="Model\CAIXA.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CATEGORIAS.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\COMISSAO.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\dbFranthesk.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbFranthesk.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\dbFranthesk.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\dbFranthesk.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbFranthesk.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MERCADORIA.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MERCADORIA_VENDA.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MOVIMENTO.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\USUARIO.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VENDA.cs">
+      <DependentUpon>dbFranthesk.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\cadastroMercadoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\cadastroMercadoria.Designer.cs">
+      <DependentUpon>cadastroMercadoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\cadCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\cadCategoria.Designer.cs">
+      <DependentUpon>cadCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\cadUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\cadUsu.Designer.cs">
+      <DependentUpon>cadUsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\cadVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\cadVenda.Designer.cs">
+      <DependentUpon>cadVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\cadVenda_Mercadoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\cadVenda_Mercadoria.Designer.cs">
+      <DependentUpon>cadVenda_Mercadoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\caixa.Designer.cs">
+      <DependentUpon>caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\consMercadoriaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\consMercadoriaVenda.Designer.cs">
+      <DependentUpon>consMercadoriaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\consVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\consVenda.Designer.cs">
+      <DependentUpon>consVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Index.Designer.cs">
+      <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\cadastroMercadoria.resx">
+      <DependentUpon>cadastroMercadoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\cadCategoria.resx">
+      <DependentUpon>cadCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\cadUsu.resx">
+      <DependentUpon>cadUsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\cadVenda.resx">
+      <DependentUpon>cadVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\cadVenda_Mercadoria.resx">
+      <DependentUpon>cadVenda_Mercadoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\caixa.resx">
+      <DependentUpon>caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\consMercadoriaVenda.resx">
+      <DependentUpon>consMercadoriaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\consVenda.resx">
+      <DependentUpon>consVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model\dbFranthesk.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbFranthesk.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\dbFranthesk.edmx.diagram">
+      <DependentUpon>dbFranthesk.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\dbFranthesk.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>dbFranthesk.Context.cs</LastGenOutput>
+      <DependentUpon>dbFranthesk.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\dbFranthesk.edmx.sql" />
+    <Content Include="Model\dbFranthesk.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbFranthesk.edmx</DependentUpon>
+      <LastGenOutput>dbFranthesk.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>

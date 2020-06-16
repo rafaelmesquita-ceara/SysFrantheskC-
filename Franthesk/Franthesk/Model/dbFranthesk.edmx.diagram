@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fd4ef3ce1f9e4a059c98355397975dbb" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="frantheskModel.CAIXA" Width="2.875" PointX="5.625" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="frantheskModel.COMISSAO" Width="1.5" PointX="7.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="frantheskModel.MERCADORIA" Width="1.5" PointX="1.375" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="frantheskModel.MERCADORIA_VENDA" Width="1.5" PointX="2.875" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="frantheskModel.MOVIMENTO" Width="1.5" PointX="5.625" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="frantheskModel.USUARIO" Width="1.5" PointX="5.875" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="frantheskModel.VENDA" Width="1.5" PointX="0.625" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="frantheskModel.FK_MERCADORIA_MERCADORIA_VENDA1" ManuallyRouted="false" />
+        <AssociationConnector Association="frantheskModel.FK_VENDA_MERCADORIA_VENDA" ManuallyRouted="false" />
+        <AssociationConnector Association="frantheskModel.FK_MOVIMENTO_CAIXA" />
+        <EntityTypeShape EntityType="frantheskModel.CATEGORIAS" Width="1.5" PointX="3.25" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="frantheskModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="frantheskModelStoreContainer">
+    <EntitySet Name="CAIXA" EntityType="frantheskModel.Store.CAIXA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMISSAO" EntityType="frantheskModel.Store.COMISSAO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MERCADORIA" EntityType="frantheskModel.Store.MERCADORIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MERCADORIA_VENDA" EntityType="frantheskModel.Store.MERCADORIA_VENDA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MOVIMENTO" EntityType="frantheskModel.Store.MOVIMENTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USUARIO" EntityType="frantheskModel.Store.USUARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VENDA" EntityType="frantheskModel.Store.VENDA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CATEGORIAS" EntityType="frantheskModel.Store.CATEGORIAS" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_MERCADORIA_MERCADORIA_VENDA1" Association="frantheskModel.Store.FK_MERCADORIA_MERCADORIA_VENDA1">
+      <End Role="MERCADORIA" EntitySet="MERCADORIA" />
+      <End Role="MERCADORIA_VENDA" EntitySet="MERCADORIA_VENDA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENDA_MERCADORIA_VENDA" Association="frantheskModel.Store.FK_VENDA_MERCADORIA_VENDA">
+      <End Role="VENDA" EntitySet="VENDA" />
+      <End Role="MERCADORIA_VENDA" EntitySet="MERCADORIA_VENDA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVIMENTO_CAIXA" Association="frantheskModel.Store.FK_MOVIMENTO_CAIXA">
+      <End Role="CAIXA" EntitySet="CAIXA" />
+      <End Role="MOVIMENTO" EntitySet="MOVIMENTO" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CAIXA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DT_Data" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VL_ValorDinheiroAdmin" Type="float" Nullable="true" />
+    <Property Name="VL_ValorCartaoAdmin" Type="float" Nullable="true" />
+    <Property Name="VL_ValorDinheiroFunc" Type="float" Nullable="true" />
+    <Property Name="VL_ValorCartaoFunc" Type="float" Nullable="true" />
+    <Property Name="NM_Status" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VL_ValorInicial" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="COMISSAO">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DT_Data" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VL_Total" Type="float" Nullable="true" />
+    <Property Name="VL_Comissao" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MERCADORIA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CD_Referencia" Type="int" Nullable="true" />
+    <Property Name="NM_Nome" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="TG_Categoria" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DT_Data" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VL_ValorCompra" Type="float" Nullable="true" />
+    <Property Name="VL_ValorVenda" Type="float" Nullable="true" />
+    <Property Name="VL_Estoque" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MERCADORIA_VENDA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CD_Mercadoria" Type="int" Nullable="true" />
+    <Property Name="CD_Venda" Type="int" Nullable="true" />
+    <Property Name="QT_Quantidade" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MOVIMENTO">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DT_Hora" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VL_Valor" Type="float" Nullable="true" />
+    <Property Name="TX_Descricao" Type="varchar(max)" Nullable="true" />
+    <Property Name="CD_Caixa" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_Nome" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="TG_Login" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="NR_Senha" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CD_Admin" Type="int" Nullable="true" />
+    <Property Name="NR_Tel" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="TX_ENDE" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENDA">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_Vendedor" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DT_Data" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VL_ValorTotal" Type="float" Nullable="true" />
+    <Property Name="CD_Cartao" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CATEGORIAS">
+    <Key>
+      <PropertyRef Name="CD_ID" />
+    </Key>
+    <Property Name="CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CD_Nome" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_MERCADORIA_MERCADORIA_VENDA1">
+    <End Role="MERCADORIA" Type="frantheskModel.Store.MERCADORIA" Multiplicity="0..1" />
+    <End Role="MERCADORIA_VENDA" Type="frantheskModel.Store.MERCADORIA_VENDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MERCADORIA">
+        <PropertyRef Name="CD_ID" />
+      </Principal>
+      <Dependent Role="MERCADORIA_VENDA">
+        <PropertyRef Name="CD_Mercadoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENDA_MERCADORIA_VENDA">
+    <End Role="VENDA" Type="frantheskModel.Store.VENDA" Multiplicity="0..1" />
+    <End Role="MERCADORIA_VENDA" Type="frantheskModel.Store.MERCADORIA_VENDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENDA">
+        <PropertyRef Name="CD_ID" />
+      </Principal>
+      <Dependent Role="MERCADORIA_VENDA">
+        <PropertyRef Name="CD_Venda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOVIMENTO_CAIXA">
+    <End Role="CAIXA" Type="frantheskModel.Store.CAIXA" Multiplicity="0..1" />
+    <End Role="MOVIMENTO" Type="frantheskModel.Store.MOVIMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAIXA">
+        <PropertyRef Name="CD_ID" />
+      </Principal>
+      <Dependent Role="MOVIMENTO">
+        <PropertyRef Name="CD_Caixa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
