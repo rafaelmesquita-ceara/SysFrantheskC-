@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/15/2020 01:32:32
--- Generated from EDMX file: C:\Users\ery_c\Desktop\Programacao\Franthesk\Franthesk\Franthesk\Model\dbFranthesk.edmx
+-- Date Created: 07/20/2020 17:10:36
+-- Generated from EDMX file: C:\Users\ery_c\Desktop\Programacao\C#\SysFrantheskC-\Franthesk\Franthesk\Model\dbFranthesk.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,6 +17,12 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_MERCADORIA_MERCADORIA_VENDA1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[MERCADORIA_VENDA] DROP CONSTRAINT [FK_MERCADORIA_MERCADORIA_VENDA1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VENDA_MERCADORIA_VENDA]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[MERCADORIA_VENDA] DROP CONSTRAINT [FK_VENDA_MERCADORIA_VENDA];
+GO
 IF OBJECT_ID(N'[dbo].[FK_MOVIMENTO_CAIXA]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[MOVIMENTO] DROP CONSTRAINT [FK_MOVIMENTO_CAIXA];
 GO
@@ -27,9 +33,6 @@ GO
 
 IF OBJECT_ID(N'[dbo].[CAIXA]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CAIXA];
-GO
-IF OBJECT_ID(N'[dbo].[CATEGORIAS]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CATEGORIAS];
 GO
 IF OBJECT_ID(N'[dbo].[COMISSAO]', 'U') IS NOT NULL
     DROP TABLE [dbo].[COMISSAO];
@@ -48,6 +51,9 @@ IF OBJECT_ID(N'[dbo].[USUARIO]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[VENDA]', 'U') IS NOT NULL
     DROP TABLE [dbo].[VENDA];
+GO
+IF OBJECT_ID(N'[dbo].[CATEGORIAS]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CATEGORIAS];
 GO
 
 -- --------------------------------------------------
